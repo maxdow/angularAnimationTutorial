@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Angularjs Animations</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+
+
+<body>
+
+    <div class="transitionSimple">Je suis une simple transition au survol</div>
+
+    <div>
+
+        <button ng-click="animeEnCours = !animeEnCours">Anime</button>
+
+        <h2 ng-if="animeEnCours" class="elementAnime">Le Javascript c'est formidable</h2>
+
+        <h2 ng-show="animeEnCours" class="elementAnime2">AngularJs aussi</h2>
+
+        <h2 ng-show="animeEnCours" class="elementAnime3">Et encore mieux avec du Css</h2>
+
+    </div>
+
+    <div ng-controller="CarouselCatCtrl">
+    <h3>Un mini caroussel avec des chats à l'interieur !</h3>
+        <div class="switch-container" ng-switch="elementEnCours">
+            <img class="animate-switch" ng-switch-when="chat1" src="http://farm4.staticflickr.com/3829/11027680643_a3e44a44a1_z.jpg" alt="chatminion1">
+            <img class="animate-switch" ng-switch-when="chat2"src="http://farm4.staticflickr.com/3291/2836742345_3f560ea89d_z.jpg" alt="chatminion2">
+            <img class="animate-switch" ng-switch-when="chat3" src="http://farm2.staticflickr.com/1336/579761138_2384373a41_z.jpg" alt="chatminion3">
+        </div>
+    </div>
+
+
+</body>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</html>

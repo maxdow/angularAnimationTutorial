@@ -1,0 +1,146 @@
+.transitionSimple {
+    transition: 0.5s linear all;
+}
+
+.transitionSimple:hover {
+    opacity: 0;
+}
+
+
+.elementAnime.ng-enter,
+.elementAnime.ng-leave {
+
+  transition: 1s linear all;
+
+}
+
+.elementAnime.ng-enter,
+.elementAnime.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+.elementAnime.ng-leave,
+.elementAnime.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+
+
+
+.elementAnime2.ng-hide-add,
+.elementAnime2.ng-hide-remove {
+
+  transition: 1s linear all;
+  display:block!important;
+}
+
+
+.elementAnime2.ng-hide  {
+    opacity:0;
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+
+@keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+.elementAnime3.ng-hide-add,
+.elementAnime3.ng-hide-remove {
+
+  display:block!important;
+}
+
+.elementAnime3.ng-hide-remove {
+    -webkit-animation: 1s fadeIn;
+}
+
+.elementAnime3.ng-hide  {
+    -webkit-animation: 1s fadeOut;
+}
+
+
+.switch-container {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    overflow: hidden;
+}
+.switch-container > img {
+    position: absolute;
+}
+
+.animate-switch.ng-enter  {
+  -webkit-animation: 0.5s fadeIn;
+   animation: 0.5s fadeIn;
+}
+
+.animate-switch.ng-leave {
+  -webkit-animation: 0.5s slideOutRight;
+   animation: 0.5s slideOutRight;
+}
